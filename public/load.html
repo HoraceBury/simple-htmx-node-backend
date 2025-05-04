@@ -1,0 +1,25 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX with Node.js</title>
+    <script src="https://unpkg.com/htmx.org@1.9.3"></script>
+</head>
+
+<body>
+    <a href="/index.html">&lt;&nbsp;Back</a>
+
+    <h1>HTMX Load Content Demo</h1>
+
+    <div id="replace">
+        <button hx-get="/load-data" hx-target="#replace" hx-swap="innerHTML">Replace Content</button>
+
+        <div id="content"></div>
+    </div>
+
+</body>
+
+</html>

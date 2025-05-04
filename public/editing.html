@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX In-Place Editing</title>
+    <script src="https://unpkg.com/htmx.org@1.9.3"></script>
+    <style>
+        .editable {
+            padding: 5px;
+            border: 1px dashed transparent;
+            cursor: pointer;
+        }
+        .editable:hover {
+            border-color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <a href="/index.html">&lt;&nbsp;Back</a>
+    
+    <h1>HTMX In-Place Editing Demo</h1>
+    
+    <div id="username-display"
+         hx-get="/edit-username"
+         hx-trigger="click"
+         hx-target="#username-display"
+         hx-swap="innerHTML"
+         class="editable">
+        Click to edit username
+    </div>
+
+</body>
+</html>

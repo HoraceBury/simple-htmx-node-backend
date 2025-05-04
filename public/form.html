@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Form Submission</title>
+    <script src="https://unpkg.com/htmx.org@1.9.3"></script>
+</head>
+<body>
+    <a href="/index.html">&lt;&nbsp;Back</a>
+    
+    <h1>HTMX Form Submission Demo</h1>
+
+    <div id="form-container">
+        <form hx-post="/submit-form" hx-target="#form-container" hx-swap="outerHTML">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

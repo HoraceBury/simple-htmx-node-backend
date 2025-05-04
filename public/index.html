@@ -5,11 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTMX with Node.js</title>
-    <script src="https://unpkg.com/htmx.org@1.9.3"></script>
 </head>
 <body>
-    <h1>HTMX with Node.js</h1>
-    <button hx-get="/data" hx-target="#content" hx-swap="innerHTML">Load Content</button>
-    <div id="content"></div>
+    <h1>HTMX with Node.js examples</h1>
+
+    <div id="item-container">
+        <ul>
+            <li><a href="/editing.html">Editing</a></li>
+            <li><a href="/form.html">Form</a></li>
+            <li><a href="/load.html">Load</a></li>
+            <li><a href="/scroll.html">Scroll</a></li>
+            <li><a href="/search.html">Search</a></li>
+            <li><a href="/tabnav.html">Tab Nav</a></li>
+        </ul>
+    </div>
+
 </body>
 </html>

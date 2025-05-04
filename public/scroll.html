@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTMX Infinite Scroll</title>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .item {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #load-more-trigger {
+            height: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/index.html">&lt;&nbsp;Back</a>
+
+    <h1>Infinite Scroll Demo</h1>
+
+    <div id="item-container">
+        <!-- Initial load -->
+        <div hx-get="/load-items?page=0" hx-trigger="load" hx-target="#item-container" hx-swap="beforeend">
+        </div>
+    </div>
+</body>
+
+</html>
